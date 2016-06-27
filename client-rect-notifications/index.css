@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: #EEEEEE;
+  color: #222222;
+  font-family: 'Indie Flower', cursive;
+  font-size: 14px; }
+  body h1 {
+    font-size: 2em; }
+  body h2 {
+    font-size: 1.75em; }
+  body p, body li {
+    font-size: 1.5em; }
+  body pre {
+    font-family: 'Inconsolata'; }
+
+.page-home > :nth-child(2) {
+  margin-left: 10vw; }
+  .page-home > :nth-child(2) > p {
+    width: 40vw;
+    font-size: 1.5em; }
+    .page-home > :nth-child(2) > p > em {
+      font-weight: bold; }
+  .page-home > :nth-child(2) > div {
+    height: 20vh;
+    width: 20vw;
+    background-color: #222222;
+    margin-top: 120vh;
+    margin-bottom: 120vh; }
+
+.page-home > :nth-child(3) {
+  position: fixed;
+  top: 0;
+  right: 10vw; }
+  .page-home > :nth-child(3) > ol {
+    padding: 0;
+    list-style: none; }
+    .page-home > :nth-child(3) > ol :nth-child(1) {
+      opacity: 0.95; }
+    .page-home > :nth-child(3) > ol :nth-child(2) {
+      opacity: 0.9; }
+    .page-home > :nth-child(3) > ol :nth-child(3) {
+      opacity: 0.85; }
+    .page-home > :nth-child(3) > ol :nth-child(4) {
+      opacity: 0.8; }
+    .page-home > :nth-child(3) > ol :nth-child(5) {
+      opacity: 0.75; }
+    .page-home > :nth-child(3) > ol :nth-child(6) {
+      opacity: 0.7; }
+    .page-home > :nth-child(3) > ol :nth-child(7) {
+      opacity: 0.65; }
+    .page-home > :nth-child(3) > ol :nth-child(8) {
+      opacity: 0.6; }
+    .page-home > :nth-child(3) > ol :nth-child(9) {
+      opacity: 0.55; }
+    .page-home > :nth-child(3) > ol :nth-child(10) {
+      opacity: 0.5; }
+    .page-home > :nth-child(3) > ol :nth-child(11) {
+      opacity: 0.45; }
+    .page-home > :nth-child(3) > ol :nth-child(12) {
+      opacity: 0.4; }
+    .page-home > :nth-child(3) > ol :nth-child(13) {
+      opacity: 0.35; }
+    .page-home > :nth-child(3) > ol :nth-child(14) {
+      opacity: 0.3; }
+    .page-home > :nth-child(3) > ol :nth-child(15) {
+      opacity: 0.25; }
+    .page-home > :nth-child(3) > ol :nth-child(16) {
+      opacity: 0.2; }
+    .page-home > :nth-child(3) > ol :nth-child(17) {
+      opacity: 0.15; }
+    .page-home > :nth-child(3) > ol :nth-child(18) {
+      opacity: 0.1; }
+    .page-home > :nth-child(3) > ol :nth-child(19) {
+      opacity: 0.05; }
+    .page-home > :nth-child(3) > ol :nth-child(20) {
+      opacity: 0; }
