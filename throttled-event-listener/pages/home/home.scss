@@ -1,0 +1,42 @@
+.page-home {
+    user-select: none;
+    &>:nth-child(4), &>:nth-child(5), &>:nth-child(6) {
+        display: flex;
+        align-items: center;    
+        
+        h2 {
+            width: 10vw;
+            text-align: right;
+            border-right: 1px solid $color-dark;
+            padding-right: 5px;
+        }
+        &>ol {
+            width: 70vw;
+            overflow: hidden;
+            &>li {
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                border-radius: 10px;
+                background: $color-dark;
+                animation-duration: 2s;
+                animation-name: slideout;
+                animation-fill-mode: forwards;
+            }
+        }  
+        @keyframes slideout {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(70vw);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(70vw);
+                opacity: 0;
+            }
+        }
+    }
+}
