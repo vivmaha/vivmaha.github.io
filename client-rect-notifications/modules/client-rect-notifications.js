@@ -31,7 +31,7 @@ exports.add = function(element, notifications) {
         state.notifier = notifications[stateKey];
     }
 
-    var throttledEventListener = require('./throttled-event-listener');
+    var throttledEventListener = require('throttled-event-listener');
     
     throttledEventListener.add('scroll', 100, function() {
         var elementClientRect = element.getBoundingClientRect(); 
