@@ -61,26 +61,30 @@ exports.add = function(
         [
             '$scope',
             function($scope) {
-                $scope.inputs = [];
-                $scope.throttled = [];
-                $scope.streams = [ {
-                    name : 'input',
-                    data : [],
-                }, {
-                    name : 'throttled',
-                    data : [],
-                }, {
-                    name : 'debounced',
-                    data : [],
-                }, ];
 
-                function fire(streamIndex) {
-                    $scope.streams[streamIndex].data.push({});
+                var Stream = function(name) {
+                    this.name = name;
+                    this.data = [];
+                }
+
+                Stream.prototype.fire = function() {
+                    this.data.push({});
                     $scope.$apply();
                 }
 
+
+                var inputStream = new Stream('input');
+                var throttledStream = new Stream('throttled');
+                var debouncedStream = new Stream('debounced');
+
+                $scope.streams = [ 
+                    inputStream,
+                    throttledStream,
+                    debouncedStream,
+                ];                
+
                 window.addEventListener('mousedown', function(ev) {
-                    fire(0);
+                    inputStream.fire();
                 });
 
                 var throttler = require('../../modules/throttled-event-listener');
@@ -88,14 +92,14 @@ exports.add = function(
                     'mousedown',
                     1000,
                     function() {
-                        fire(1);
+                        throttledStream.fire();
                     }
                 );
                 throttler.add(
                     'mousedown',
                     1000,
                     function() {
-                        fire(2);
+                        debouncedStream.fire();
                     }, {
                         debounce : true,
                     }
